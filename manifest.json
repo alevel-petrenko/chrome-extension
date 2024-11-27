@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Extension to work with base address",
+    "version": "1.0.0",
+    "description": "A simple Chrome extension to adjust base address on the tab",
+    "permissions": ["tabs"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "host_permissions": ["https://*/*"],
+    "content_scripts": [
+      {
+        "matches": ["https://*/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+    //   "default_popup": "popup/popup.html",
+      "default_icon": {
+        "16": "icons/icon16.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      }
+    }
+  }
